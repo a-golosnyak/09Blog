@@ -1,0 +1,43 @@
+$left-background: rgba(10, 10, 30, 0.80);
+$left-element-background: rgba(10, 10, 30, 0.15);
+$left-weight: 300px;
+$right-weight: 295px;
+$footer-height: 70px;
+$lightgrey-bckgnd: #EEEEEE;
+$light-gray: #aaa;
+$middle-gray: #666;
+$dark-grey: #333;
+$common-green: #265;
+$darker-green: #155545;	
+
+
+/*-- For grunt -------------------------------------------------------------------- */
+@import '../css/bootstrap.css';
+@import 'blog';
+
+/*@import '../css/carousel.css';  */
+
+/*-- For symfony ------------------------------------------------------------------ */
+//	@import '~bootstrap-sass/assets/stylesheets/bootstrap';
+
+
+.main
+{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  min-width: 100%;
+  min-height: 100vh;
+}
+
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+ 

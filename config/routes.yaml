@@ -1,0 +1,7 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+auto:
+    path: /auto
+    controller: App\Controller\AutoController::showArticle

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		<meta name="description" content="">
+		<meta name="author" content="">
+
+        {% block stylesheets %}
+            <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+		    <!-- Bootstrap core CSS -->
+		    <link rel="stylesheet" href="blog/css/main.css">         <!-- В файле main.css подключен bootstrap -->
+		{% endblock %}
+    </head>
+    <body>
+    	{% block header %}
+	        <div class="blog-header">
+	            <div class="container">
+	                <h3 class="blog-title">The Blog</h3>
+	                <p class="lead blog-description">An example blog template built with Bootstrap.</p>
+	            </div>
+	        </div>
+
+		{% endblock %}
+		<div class="navigation">
+			{% block navpanel %}
+				<div class="row ">
+				    <div class="container">
+				        <div class=" col-xs-6"> 
+				            <div class="nav nav-tabs ">
+				                <div class="nav-item">
+				                    <div class="nav-link " href="#">Главная</div>
+				                </div>
+				                <div class="nav-item dropdown">
+				                    <div class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Рубрика</div>
+				                    <div class="dropdown-menu dropdown-menu-left">
+				                        <div class="dropdown-item" href="#">Разработка электроники</div>
+
+				                  {#      <div class="dropdown-item" href="#auto">Автомобили</div> #}
+
+										<form class="dropdown-item" name='transition' method="post" action='/auto'>
+											<input type="submit" value="Авто"  > 
+										</form>
+
+										<div class="dropdown-item" href="auto">Авто</div>
+				                        <div class="dropdown-item" href="#">Спорт</div>
+				                        <div class="dropdown-divider"></div>
+				                        <div class="dropdown-item" href="#">Тестовые проекты</div>
+				                    </div>
+				                </div>
+				                <div class="nav-item">
+				                    <div class="nav-link disabled" href="#">Контакты</div>
+				                </div>
+				                <div class="nav-item">
+				                    <div class="nav-link " href="#">О сайте</div>
+				                </div>
+				            </div>
+				        </div>
+				        <div class=" col-xs-1">
+
+				        </div>
+				        <div class=" col-xs-3"> 
+				            <div class="row">
+				                <div class="nav-tabs">
+				                    <form class="form-inline my-2 my-xs-4 nav-item" >
+				                        <input class="form-control mr-xs-2" type="search" placeholder="Найти" aria-label="Search" size="12" style="margin-top: 2px;">
+				                    </form>
+				                    <div class="item-search nav-item" ><i class="fab fa-sistrix"></i></div>
+				                </div>
+				            </div>
+				        </div>
+				        <div class=" col-xs-2">
+				            <div class="nav nav-tabs">
+				                <div class="nav-item dropdown " style="left: auto; right: 0;">
+				                    <div class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Sign In</div>
+				                    <div class="dropdown-menu dropdown-menu-right">
+				                        <div class="dropdown-item" href="#">Action</div>
+				                        <div class="dropdown-divider"></div>
+				                        <div class="dropdown-item" href="#">Another action</div>
+				                        <div class="dropdown-item" href="#">Something else here</div>
+				                        <div class="dropdown-item" href="#">Separated link</div>
+				                    </div>
+				                </div>
+				            </div> 
+				        </div>
+
+				    </div>
+				    
+				</div>
+			{% endblock %}
+		</div>
+
+		{% block alert%}
+		{# 	<P>Palundra!</P> #}
+		{% endblock %}
+
+		<div class="main-field">  
+			<div class="container-fluid " >
+				<div class="container data-field">
+					{% block main %}
+						<div class="row">
+		                  	<div class="col-sm-8 blog-main">
+								<div class="blog-post">
+									<h2 class="blog-post-title">Another blog post</h2>
+									<p class="blog-post-meta">December 23, 2013 by <a href="#">Jacob</a></p>
+									<p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
+									<blockquote>
+									<p>Curabitur blandit tempus porttitor. <strong>Nullam quis risus eget urna mollis</strong> ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+									</blockquote>
+									<p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+									<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+								</div><!-- /.blog-post -->
+
+			                    <nav class="blog-pagination">
+									<a class="btn btn-outline-primary" href="#">Older</a>
+									<a class="btn btn-outline-secondary disabled" href="#">Newer</a>
+			                    </nav>
+
+			                </div><!-- /.blog-main -->
+
+			                <div class="col-sm-3 offset-sm-1 blog-sidebar">
+			                    <div class="sidebar-module sidebar-module-inset">
+									<h4>About</h4>
+									<p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+			                    </div>
+			                    <div class="sidebar-module">
+									<h4>Archives</h4>
+										<ol class="list-unstyled">
+										<li><a href="#">March 2014</a></li>
+										<li><a href="#">February 2014</a></li>
+										<li><a href="#">January 2014</a></li>
+										<li><a href="#">December 2013</a></li>
+										<li><a href="#">November 2013</a></li>
+										<li><a href="#">October 2013</a></li>
+										<li><a href="#">September 2013</a></li>
+										<li><a href="#">August 2013</a></li>
+										<li><a href="#">July 2013</a></li>
+										<li><a href="#">June 2013</a></li>
+										<li><a href="#">May 2013</a></li>
+										<li><a href="#">April 2013</a></li>
+									</ol>
+			                    </div>
+			                    <div class="sidebar-module">
+									<h4>Elsewhere</h4>
+									<ol class="list-unstyled">
+										<li><a href="#">GitHub</a></li>
+										<li><a href="#">Twitter</a></li>
+										<li><a href="#">Facebook</a></li>
+									</ol>
+			                    </div>
+			                </div><!-- /.blog-sidebar -->
+		                </div><!-- /.row -->
+					{% endblock %}		
+				</div>
+			</div>
+		</div>
+
+		{% block footer %}
+			<footer class="blog-footer">
+				<p><a href="http://getbootstrap.com">eBlog</a> by <a href="https://twitter.com/mdo">@mdo</a></p>
+				<p><a href="#">Back to top</a></p>
+			</footer>
+	    {% endblock %}
+		<!-- Bootstrap core JavaScript
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="      sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
+		<script src="blog/js/bootstrap.js"></script>
+		<script src="blog/js/my.js"></script>
+        {% block javascripts %}
+        {% endblock %}
+    </body>
+</html>
