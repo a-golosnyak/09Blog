@@ -105,6 +105,8 @@ background:
     padding-top: 1.5rem;
     padding-bottom: 1rem;
     border: 1px solid grey;
+    cursor: pointer;
+    
   background: 
     /* используется только один цвет */ 
     linear-gradient(
@@ -115,7 +117,7 @@ background:
     /* под градиентом, изображение */
     url(../images/03_pcb.jpg);
     background-position: 50% 20%;
-    cursor: pointer;
+    
 }
 
 .blog-title {
@@ -205,7 +207,7 @@ background:
   }
   .blog-post-title {
     margin-bottom: .25rem;
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   .blog-post-meta {
     margin-bottom: 1.25rem;

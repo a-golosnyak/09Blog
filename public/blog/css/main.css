@@ -36,9 +36,6 @@ h6, .h6 {
  * Navigation ---------------------------------------------------------------
  */
 .navigation {
-  /*  margin-bottom: 3rem;  */
-  /* ╨Ю╤В╤Б╤В╤Г╨┐ ╨╝╨╡╨╢╨┤╤Г ╨║╨╜╨╛╨┐╨║╨░╨╝╨╕ ╨╕ ╨▒╨╗╨╛╨║╨╛╨╝ ╤Б╤В╨░╤В╨╡╨╣ */
-  /*  background-color: #428bca;      */
   background: linear-gradient(rgba(66, 139, 202, 0.6), rgba(66, 139, 202, 0.8), rgba(66, 139, 202, 0.9), #428bca);
   -webkit-box-shadow: inset 0 -0.1rem 0.25rem rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 -0.1rem 0.25rem rgba(0, 0, 0, 0.1);
@@ -51,7 +48,7 @@ h6, .h6 {
 .nav-link {
   position: relative;
   padding: 1rem;
-  color: #cdddeb;
+  color: rgb(235, 235, 235);
 }
 
 .nav-link:hover,
@@ -94,16 +91,18 @@ h6, .h6 {
 .blog-header {
   padding-top: 1.5rem;
   padding-bottom: 1rem;
-  border: 1px solid grey;
-  background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.9)), no-repeat, url(../images/03_pcb.jpg);
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.6), 
+    rgba(255, 255, 255, 0.9)), no-repeat, url(../images/03_pcb.jpg);
   background-position: 50% 20%;
+  cursor: pointer;
 }
 
 .blog-title {
   margin-bottom: 0;
   font-size: 2rem;
   font-weight: normal;
-  color: #505050;
+  color: #303030;
 }
 
 .blog-description {
@@ -127,6 +126,10 @@ h6, .h6 {
 .nav-tabs {
   padding: 0em 0em;
   cursor: pointer;
+}
+
+a:focus, a:hover {
+  text-decoration: none;
 }
 
 /*
@@ -165,6 +168,7 @@ h6, .h6 {
 .main-field {
   background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.6)), no-repeat, url(../images/06.jpg);
   background-position: 50%;
+  min-width: 100rem: 
 }
 
 .data-field {
@@ -178,7 +182,7 @@ h6, .h6 {
 
 .blog-post-title {
   margin-bottom: .25rem;
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 
 .blog-post-meta {
