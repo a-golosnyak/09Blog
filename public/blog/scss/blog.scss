@@ -115,8 +115,9 @@ background:
     /* под градиентом, изображение */
     url(../images/03_pcb.jpg);
     background-position: 50% 20%;
-
+    cursor: pointer;
 }
+
 .blog-title {
   margin-bottom: 0;
   font-size: 2rem;

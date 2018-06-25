@@ -12,7 +12,8 @@
         {% block stylesheets %}
             <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 		    <!-- Bootstrap core CSS -->
-		    <link rel="stylesheet" href="blog/css/main.css">         <!-- В файле main.css подключен bootstrap -->
+		{#    <link rel="stylesheet" href="blog/css/main.css">  #}
+			<link rel="stylesheet" href="{{ asset('blog/css/main.css')}}">   
 		{% endblock %}
     </head>
     <body>
@@ -37,18 +38,16 @@
 				                <div class="nav-item dropdown">
 				                    <div class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Рубрика</div>
 				                    <div class="dropdown-menu dropdown-menu-left">
-				                        <div class="dropdown-item" href="#">Разработка электроники</div>
-
-				                  {#      <div class="dropdown-item" href="#auto">Автомобили</div> #}
-
+				                        <div class="dropdown-item" href="#">Разработка электроники</div>    
 										<form class="dropdown-item" name='transition' method="post" action='auto'>
 											<input type="submit" value="Авто"  > 
 										</form>
 
-										<div class="dropdown-item" href="auto">Авто</div>
-				                        <div class="dropdown-item" href="/auto">Спорт</div>
+										<a class="dropdown-item" href="auto">Авто</a>
+										<a class="dropdown-item" href="{{ path('auto') }}">Авто</a>
+				                        <a class="dropdown-item" href="{{ url('auto') }}">Спорт</a>
 				                        <div class="dropdown-divider"></div>
-				                        <div class="dropdown-item" href="#">Тестовые проекты</div>
+				                        <a class="dropdown-item" href="#">Тестовые проекты</a>
 				                    </div>
 				                </div>
 				                <div class="nav-item">
@@ -106,7 +105,7 @@
 								<div class="blog-post">
 									<h2 class="blog-post-title">Another blog post</h2>
 									<p class="blog-post-meta">December 23, 2013 by <a href="#">Jacob</a></p>
-									<p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
+									<p class="h-100">Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
 									<blockquote>
 									<p>Curabitur blandit tempus porttitor. <strong>Nullam quis risus eget urna mollis</strong> ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
 									</blockquote>
